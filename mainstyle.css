@@ -1,0 +1,33 @@
+*{
+  margin:0;
+  padding:0;
+  background-color:#476072;
+  color:#EEEEEE;
+}
+a{
+  text-decoration:none;
+}
+.wrap{
+  width:80%;
+  background-color:#476072;
+  margin:0 auto;
+  text-align:center;
+  position:relative;
+  margin-top:50px;
+}
+.welcome{
+  margin-top:10%;
+  font-size:40px;
+}
+.logo{
+  margin-top:30px;
+}
+.order{
+  margin-top:10%;
+  margin-bottom:10%;
+}
+button{
+  width:50%;
+  height:150px;
+  font-size:40px;
+}

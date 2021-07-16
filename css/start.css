@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+* {
+    font-family: 'Black Han Sans', sans-serif;
+    background-color: #CDF0EA;
+    color: #F38BA0;
+    
+}
+
+.hello {
+    font-size: 70px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.aribaOS {
+    font-size: 40px;
+    text-align: center;
+}
+
+.order {
+    margin-top: 200px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 50px;
+}
+/*
+#button {
+    border: 5px solid;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+#button :hover {
+    background-color: #CDF0EA;
+    color: #CDF0EA;
+}
+*/
+button{
+    background:#CDF0EA;
+    color:#F38BA0; 
+    border:none;
+    position:relative;
+    height:140px;
+    font-size:140px;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  button:hover{
+    background:#CDF0EA;
+    color:#1AAB8A;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
