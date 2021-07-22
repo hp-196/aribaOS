@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    background-color:#F38BA0;
+    outline: auto;
+    display: flex;
+}
+
+.nav ul {
+    width: 500px;
+    overflow: hidden;
+    margin-left: 400px;
+    display: flex;
+    
+}
+
+.nav li {
+    width: 50%;
+    text-align: center;
+    background-color: #F38BA0;
+    line-height: 100px;
+    font-size: 25px;
+    color: white;
+
+}
+
+.nav ul li:hover {
+    background-color: #FFBCBC;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
+.line {
+    padding: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    border: 2px ridge;
+    border-radius: 5px;
+    text-align: center;
+
+}
