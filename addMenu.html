@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/addMenu.css">
 </head>
 <body>
+    
     <div class="wrap">
         <div class="nav">
             <img src="image/ariba.png" width="100px">
@@ -18,12 +19,21 @@
         </div>
         <div class="menuForm">
             <form>
-                <p>메뉴이름</p>
-                <input type="text">
+                <p>메뉴 이름</p>
+                <input type="text" id ="menuName" placeholder="예)제육볶음" style="height: 30px; width: 300px;">
+                <p>메뉴 정보</p>
+                <input type="text" id = "menuInfo" placeholder="예)줜맛탱" style="height: 100px; width: 300px;">
+                <p>가격</p>
+                <input type="text" id = "price" placeholder="예)5000" style="width: 300px; height: 30px">
+                <p></p>
                 <br>
-                <p>dwdwd</p>
+                <button id="addMenuBtn" onclick = "addMenu()" type="button" style="width: 300px; height: 50px;">메뉴 등록하기</button>
+                
             </form>
         </div>
+        
     </div>
+    <script src="js/addMenu.js"></script>
+    
 </body>
 </html>

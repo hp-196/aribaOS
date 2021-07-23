@@ -49,11 +49,12 @@ a, a:visited, a:hover, a:active {
     padding: 30px;
 }
 
-.card {
+.card, .addCard {
+    float: left;
     width: 300px;
     height: 400px;
     border: 2px ridge;
     border-radius: 5px;
     text-align: center;
-
+    margin-right: 50px;
 }
