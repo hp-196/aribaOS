@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/public/addMenu.css">
+    <title>메뉴 추가</title>
+  </head>
+  <body>
+    <div class="nav">
+        <img src="/public/ariba.png" width="100px">
+    <ul>
+        <li><a href="/hello">주문페이지</a></li>
+        <li><a href="/bossPage">사장님페이지</a></li>
+    </ul>
+    </div>
+
+    <div class="menuForm">
+        <form action="/add", method="POST">
+            <p>메뉴 이름</p>
+            <input type="text" name="name" placeholder="예)제육볶음" style="height: 30px; width: 300px;">
+            <p>카테고리</p>
+            <label><input type="radio" name="q" value="korea"> 한식</label>
+            <label><input type="radio" name="q" value="us">양식</label>
+            <label><input type="radio" name="q" value="japan">일식</label>
+            <label><input type="radio" name="q" value="china">중식</label>
+            <p>가격</p>
+            <input type="text" name="price"  placeholder="예)5000" style="width: 300px; height: 30px">
+            <p></p>
+            <br>
+            <button id="addMenuBtn" type="submit" style="width: 300px; height: 50px;">메뉴 등록하기</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

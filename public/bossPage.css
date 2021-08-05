@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jua', sans-serif;
+}
+
+.nav {
+    background-color:#F38BA0;
+    outline: auto;
+    display: flex;
+}
+
+.nav ul {
+    width: 500px;
+    overflow: hidden;
+    margin-left: 400px;
+    display: flex;
+    
+}
+
+.nav li {
+    width: 50%;
+    text-align: center;
+    background-color: #F38BA0;
+    line-height: 100px;
+    font-size: 25px;
+    color: white;
+
+}
+
+.nav ul li:hover {
+    background-color: #FFBCBC;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
+.card, .addCard {
+    float: left;
+    width: 300px;
+    height: 500px;
+    border: 2px ridge;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: relative;
+     overflow: hidden;
+    box-shadow: 0;
+}
+.addCard .top {
+    margin-top: 70px;
+    text-align: center;
+    object-fit: cover;
+}
+
+.card .container{
+    width: 100%;
+  height: 100%;
+}
+.card .container .top {
+    height: 80%;
+    width: 100%;
+    background: url(/public/제육볶음.jpg) no-repeat center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+.card .container .bottom {
+    width: 100%;
+    height: 20%;
+}
+.card .container .bottom h1{
+    margin: 0;
+    padding: 0;
+}
+.card .container .bottom p{
+    margin: 0;
+    padding: 0;
+}
+.card .container .bottom .left{
+  height: 100%;
+  width: 70%;
+  background: #f4f4f4;
+  position: relative;
+  float: left;
+}
+.card .container .bottom .left .details {
+    padding: 10px;
+    float: left;
+    width: 100%;
+  }
+.card .container .bottom .right{
+    width: 30%;
+    background: #a6cdde;
+    color: white;
+    float: right;
+    height: 100%;
+    overflow: hidden;
+}
+.card .container .bottom .right .done {
+    width: calc(30% - 2px);
+    float: left;
+    border-right: solid thin rgba(255, 255, 255, 0.3);
+    height: 0%;
+  }
+  .card .container .bottom .right .done i {
+    font-size: 30px;
+    padding: 30px;
+    color: white;
+  }
+ 
