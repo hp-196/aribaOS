@@ -32,16 +32,24 @@ app.get('/hello', function(req, res) {
 
 //한식 양식 일식 중식 메뉴
 app.get('/korea', function(req, res) {
-    res.render('korea.ejs');
+    db.collection('menu').find().toArray(function(err, result) {
+        res.render('korea.ejs', {menu : result});
+   })
 })
 app.get('/us', function(req, res) {
-    res.render('us.ejs');
+    db.collection('menu').find().toArray(function(err, result) {
+        res.render('us.ejs', {menu : result});
+    })
 })
 app.get('/japan', function(req, res) {
-    res.render('japan.ejs');
+    db.collection('menu').find().toArray(function(err, result) {
+        res.render('japan.ejs', {menu : result});
+    })
 })
 app.get('/china', function(req, res) {
-    res.render('china.ejs');
+    db.collection('menu').find().toArray(function(err, result) {
+        res.render('china.ejs', {menu : result});
+    })
 })
 //한식 양식 일식 중식 메뉴
 
@@ -55,10 +63,14 @@ app.get('/addMenu', function(req, res) {
 })
 
 app.post('/add', function(req, res) {
-    //var total = {메뉴 : req.body.name, 카테고리: req.body.info, 가격 : req.body.price};
-    //db.collection('menu').insertOne(total, function(){
-        //res.redirect('/bossPage');
-
-    //});
-    console.log(req.body.form.q);
+    db.collection('menuCount').findOne({ count : '메뉴개수'}, function(err, result1) {
+        console.log(result1);
+    var sum = result1.num;
+    var total = {_id : sum+1, 메뉴 : req.body.name, 카테고리 : req.body.type, 가격 : req.body.price};
+        db.collection('menu').insertOne(total, function(err, result2){
+            db.collection('menuCount').updateOne( { count :'메뉴개수'}, { $inc : { num:1 } }, function(err, result) {
+                res.redirect('/bossPage');
+            })
+        });
+    })
 })
