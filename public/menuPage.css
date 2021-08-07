@@ -45,7 +45,17 @@ a, a:visited, a:hover, a:active {
     color: inherit;
   }
 
-
+.wrap {
+    display: flex;
+    flex-direction: column;
+    
+}
+.cardWrap {
+    width: 100%;
+    height: 75%;
+    outline: auto;
+    position: relative;
+}
 .card, .addCard {
     float: left;
     width: 300px;
@@ -123,3 +133,13 @@ a, a:visited, a:hover, a:active {
     color: white;
   }
  
+  .cal {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: scroll;
+  }
+
+  .cal .container {
+      margin-top: 50px;
+  }

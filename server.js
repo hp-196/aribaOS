@@ -56,6 +56,7 @@ app.get('/china', function(req, res) {
 app.get('/bossPage', function(req, res) {
     db.collection('menu').find().toArray(function(err, result) {
         res.render('bossPage.ejs', {menus : result})
+        console.log(result);
     })
 })
 app.get('/addMenu', function(req, res) {
@@ -73,4 +74,15 @@ app.post('/add', function(req, res) {
             })
         });
     })
+}) 
+
+app.delete('/delete', function(req, res) {
+    console.log(req.body._id);
+   id = parseInt(req.body._id);
+   var del = { _id : id };
+   console.log(del);
+   db.collection('menu').deleteOne( del , function(err, result) {
+    console.log('삭제완료');
+    res.status(200).send('sex');
+   } )
 })
