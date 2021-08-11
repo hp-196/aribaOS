@@ -71,13 +71,14 @@ a, a:visited, a:hover, a:active {
 .card .container .top {
     height: 80%;
     width: 100%;
-    background: url(/public/제육볶음.jpg) no-repeat center center;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+    
 }
-
+.card .container .top .menu {
+    height: 100%;
+    width: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+}
 
 .card .container .bottom {
     width: 100%;

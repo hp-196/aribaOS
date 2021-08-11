@@ -18,9 +18,12 @@
     </div>
 
     <div class="menuForm">
-        <form action="/add", method="POST">
+        <form action="/add", method="POST" enctype="multipart/form-data">
             <p>메뉴 이름</p>
             <input type="text" name="name" placeholder="예)제육볶음" style="height: 30px; width: 300px;">
+            <br>
+            <p>메뉴 사진</p>
+            <input type="file" name="menuName">
             <p>카테고리</p>
             <label><input type="radio" name="type" value="한식"> 한식</label>
             <label><input type="radio" name="type" value="양식">양식</label>

@@ -16,9 +16,9 @@ body {
 }
 
 .menu ul {
-    width: 500px;
+    width: 100%;
     overflow: hidden;
-    margin-left: 400px;
+    
     display: flex;
     
 }

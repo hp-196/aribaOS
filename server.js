@@ -59,18 +59,42 @@ app.get('/bossPage', function(req, res) {
         console.log(result);
     })
 })
+
+let multer = require('multer');
+
+var storage = multer.diskStorage({
+    destination : function(req, file, cb) {
+        cb(null, './public/image')
+    },
+    filename : function(req, file, cb) {
+        let newFileName = new Date().valueOf() + path.extname(file.originalname)
+        cb(null, newFileName);  
+    }
+});
+var path = require('path');
+var upload = multer({
+    storage : storage,
+    fileFilter: function (req, file, callback) {
+        var ext = path.extname(file.originalname);
+        if (ext !== '.png' && ext !== '.jpg' && ext !== '.jpeg') {
+            return callback(new Error('이미지만 업로드하세요'))
+        }
+        callback(null, true)
+    }
+})
+
 app.get('/addMenu', function(req, res) {
     res.render('addMenu.ejs');
 })
 
-app.post('/add', function(req, res) {
+app.post('/add', upload.single('menuName'), function(req, res) {
     db.collection('menuCount').findOne({ count : '메뉴개수'}, function(err, result1) {
-        console.log(result1);
     var sum = result1.num;
-    var total = {_id : sum+1, 메뉴 : req.body.name, 카테고리 : req.body.type, 가격 : req.body.price};
+    var total = {_id : sum+1, 메뉴 : req.body.name, 카테고리 : req.body.type, 가격 : req.body.price, 메뉴사진 : req.file.path};
         db.collection('menu').insertOne(total, function(err, result2){
             db.collection('menuCount').updateOne( { count :'메뉴개수'}, { $inc : { num:1 } }, function(err, result) {
                 res.redirect('/bossPage');
+                
             })
         });
     })
